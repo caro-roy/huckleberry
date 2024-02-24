@@ -1,3 +1,29 @@
+:root {
+  --color-primary: hsl(160deg, 100%, 30%);
+  --color-secondary: hsl(45deg, 100%, 50%);
+  --color-secondary-dark: hsl(45deg, 100%, 40%);
+  --color-black: hsl(0deg, 0%, 0%);
+  --color-white: hsl(0deg, 0%, 100%);
+  --color-neutral-1: hsl(0deg, 0%, 60%);
+  --color-neutral-2: hsl(0deg, 0%, 40%);
+  --color-neutral-3: hsl(0deg, 0%, 30%);
+  --color-neutral-4: hsl(0deg, 0%, 10%);
+
+  --font-size-4: 1rem;
+  --font-size-5: 1.25rem;
+  --font-size-6: 1.5rem;
+  --font-size-8: 2rem;
+
+  --spacing-2: 8px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-24: 96px;
+  --spacing-32: 128px;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -7,6 +33,86 @@ html,
 body {
   margin: 0;
   padding: 0;
+
+  color: var(--color-black);
 }
 
 /* Add styles here! */
+h1,
+h2 {
+  margin: 0;
+
+  line-height: 1.2em;
+  font-weight: 800;
+}
+
+h1 {
+  margin-bottom: var(--spacing-12);
+
+  font-size: var(--font-size-8);
+}
+
+h2 {
+  margin-bottom: var(--spacing-4);
+
+  font-size: var(--font-size-6);
+}
+
+h2.indented-heading {
+  margin-left: calc(-1 * var(--spacing-8));
+}
+
+p {
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+
+  font-size: var(--font-size-5);
+  line-height: 1.5em;
+}
+
+strong {
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+section {
+  border: solid 1px transparent;
+}
+
+main {
+  border-top: solid var(--spacing-2) var(--color-neutral-1);
+
+  background-color: var(--color-neutral-2);
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-chunk {
+  margin-top: var(--spacing-24);
+  margin-bottom: var(--spacing-16);
+  padding: var(--spacing-6);
+}
+
+.card {
+  margin-top: var(--spacing-16);
+  margin-bottom: var(--spacing-16);
+  border-bottom: solid var(--spacing-2) var(--color-neutral-1);
+  padding: var(--spacing-6);
+
+  font-weight: 500;
+
+  background-color: var(--color-white);
+}
+
+.card h2 {
+  width: fit-content;
+  margin-top: calc(-1 * var(--spacing-4));
+  border-bottom: solid var(--spacing-2) var(--color-secondary-dark);
+  padding: var(--spacing-4) var(--spacing-8) calc(var(--spacing-4) - 1px);
+
+  background-color: var(--color-secondary);
+}
